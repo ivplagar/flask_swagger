@@ -21,4 +21,19 @@ def login():
    else:
       return 'welcome to a GET'
  
+@app.route('/users/<user_id>', methods = ['GET', 'POST', 'DELETE'])
+def user(user_id):
+    if request.method == 'GET':
+        return 'You are running GET method for '+ user_id + ' user'
+    if request.method == 'POST':
+        #data = request.form # a multidict containing POST data
+        return 'You are running POST method for '+ user_id + ' user ' 
+    if request.method == 'DELETE':
+        return 'You are running DELETE method for '+ user_id + ' user '
+
+
+
+
+
+ 
 app.run(host='localhost', port=99)

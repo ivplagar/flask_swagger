@@ -34,7 +34,7 @@ Then open a url on http://localhost:99/form
 Class Exercise - 10-15 min:
 - Modify /users/<user_id> call to split it according to the methods.
 
-# Exercise 2
+# Exercise 2 - Flask python into docker
 
 On this exercise the only goal is to create your first API around a docker file
 

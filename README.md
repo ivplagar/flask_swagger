@@ -14,7 +14,7 @@ Run the following commands inside the exercise folder:
 Then open a url on http://localhost:99
 
 
-# Exercise 1
+# Exercise 1 - Flask python
 
 On this exercise the only goal is to create your first API where you will invoke different services internally
 
@@ -23,6 +23,9 @@ On this exercise the only goal is to create your first API where you will invoke
 >python main.py
 
 Then open a url on http://localhost:99/form
+
+Class Exercise 1.0:
+- Modify /users/<user_id> call to split it according to the methods.
 
 # Exercise 2
 

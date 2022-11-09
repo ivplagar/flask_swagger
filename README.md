@@ -89,9 +89,9 @@ The methods should return;
 - tipo - string
 
 Steps:
-1- Create your yaml
-2- Check the format into https://editor.swagger.io/
-3- Create a swagger_server with python-flask lenguage
+- Create your yaml
+- Check the format into https://editor.swagger.io/
+- Create a swagger_server with python-flask lenguage
 
 
 

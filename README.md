@@ -54,6 +54,8 @@ Let's explore swagger together
 
 Then open a url on http://localhost:8080/v2/ui/#/store
 
+Nota: https://editor.swagger.io/
+
 # Exercise 4
 
 Now we both work together

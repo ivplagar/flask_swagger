@@ -1,6 +1,13 @@
 # swagger
 
 Swagger and Flask exercises
+# Exercise client - Requests python.
+On this exercise the only goal is to be a client as developer using python and requests.
+Run the following commands inside the exercise folder:
+
+>pip install -r requirements.txt
+
+>python main.py
 
 # Exercise 0 - Flask python. First local webpage
 

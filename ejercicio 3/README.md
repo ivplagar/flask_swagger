@@ -16,6 +16,8 @@ To run the server, please execute the following from the root directory:
 ```
 pip3 install -r requirements.txt
 python3 -m swagger_server
+or 
+run it from https://github.com/NuriaUrena/flask_swagger/blob/main/ejercicio%203/__main__.py python 
 ```
 
 and open your browser to here:

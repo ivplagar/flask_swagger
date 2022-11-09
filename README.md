@@ -2,7 +2,7 @@
 
 Swagger and Flask exercises
 
-# Exercise 0
+# Exercise 0 - Flask python. First local webpage
 
 On this exercise the only goal is to create your first local webpage using python and flask.
 Run the following commands inside the exercise folder:

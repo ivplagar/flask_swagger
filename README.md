@@ -44,7 +44,7 @@ On this exercise the only goal is to create your first API around a docker file
 
 Then open a url on http://localhost:5000/form
 
-# Exercise 3
+# Exercise 3 - Swagger python
 
 Let's explore swagger together
 

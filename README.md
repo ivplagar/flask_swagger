@@ -56,7 +56,46 @@ Then open a url on http://localhost:8080/v2/ui/#/store
 
 Nota: https://editor.swagger.io/
 
-# Exercise 4
+# Exercise 4 - Create your first API using swagger
+Imagine that you work into industry compony where there is a robot. 
+We have a sensor that is monitoring robot temperature via real-time and saving into a database.
+Info from sensor;
+- id del sensor - string
+- fechamuestreo - string
+- unidad - string
+- medicion - number
+- tipo - string
+
+Our api needs create the next methods;
+> /getHistoricalMeassuresBySensorAndType/{sensor}/{start}/{end}:
+sensor -> string
+start -> string
+end-> string
+
+The methods should return;
+- code (id del sensor) - string
+- fechamuestreo - string
+- unidad - string
+- medicion - number
+- tipo - string
+
+> /getLastMeassureBySensor/{sensor}:
+sensor -> string
+The methods should return;
+- code (id del sensor) - string
+- fechamuestreo - string
+- unidad - string
+- medicion - number
+- tipo - string
+
+Steps:
+1- Create your yaml
+2- Check the format into https://editor.swagger.io/
+3- Create a swagger_server with python-flask lenguage
+
+
+
+# Exercise 5
 
 Now we both work together
 

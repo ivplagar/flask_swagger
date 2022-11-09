@@ -24,7 +24,7 @@ On this exercise the only goal is to create your first API where you will invoke
 
 Then open a url on http://localhost:99/form
 
-Class Exercise 1.0:
+Class Exercise 1.0 - 10-15 min:
 - Modify /users/<user_id> call to split it according to the methods.
 
 # Exercise 2

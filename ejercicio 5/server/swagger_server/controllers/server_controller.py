@@ -58,7 +58,7 @@ def nextcard():  # noqa: E501
     global values
     global lost_users
     for user in values:
-        print(user)
+        print(user + str(values[user]["value"]))
         if values[user]["playing"] == 1:
             
             ip=users[values[user]["user"]]["ip"]
@@ -85,9 +85,10 @@ def nextcard():  # noqa: E501
         while win :
             total=total+deck.pop()
             if total<21:
-                all_loose=
+                #all_loose=
                 for user in values:
-                    if values[user]["playing"]
+                    if values[user]["playing"]==0:
+                        win=False
 
 
         return response(200,"GAME ENDED")

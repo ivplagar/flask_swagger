@@ -1,16 +1,10 @@
-FROM python:3.6-alpine
+FROM python:3.8-slim-buster
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY requirements.txt /usr/src/app/
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
 
-RUN pip3 install --no-cache-dir -r requirements.txt
+COPY . .
 
-COPY . /usr/src/app
-
-EXPOSE 8081
-
-ENTRYPOINT ["python3"]
-
-CMD ["-m", "swagger_client"]
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]

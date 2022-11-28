@@ -67,6 +67,16 @@ Info from sensor;
 - tipo - string
 
 Our api needs create the next methods;
+> /getLastMeassureBySensor/{sensor}:
+sensor -> string
+The methods should return;
+- code (id del sensor) - string
+- fechamuestreo - string
+- unidad - string
+- medicion - number
+- tipo - string
+
+
 > /getHistoricalMeassuresBySensorAndType/{sensor}/{start}/{end}:
 sensor -> string
 start -> string
@@ -79,14 +89,6 @@ The methods should return;
 - medicion - number
 - tipo - string
 
-> /getLastMeassureBySensor/{sensor}:
-sensor -> string
-The methods should return;
-- code (id del sensor) - string
-- fechamuestreo - string
-- unidad - string
-- medicion - number
-- tipo - string
 
 Steps:
 - Create your yaml
@@ -97,6 +99,4 @@ Steps:
 
 # Exercise 5
 
-Now we both work together
-
-Let's play Blackjack!!!
+Use your api created in Exercise 4 and connect it with a client.

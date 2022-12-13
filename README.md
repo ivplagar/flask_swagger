@@ -122,7 +122,8 @@ docker run -p 8080:8080 swagger_server
 http://localhost:8080/v2/getLastMeassureBySensor/25
 
 Client:
-Local
+Local - no docker
+http://localhost:5000/getLastSensorMeasurement/1
 
 # Extra Exercise
 Modify swagger.yaml of exercise 4 and upgrade the version to openapi: 3.0.1

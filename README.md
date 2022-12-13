@@ -77,7 +77,7 @@ The methods should return;
 - tipo - string
 
 
-> /getHistoricalMeassuresBySensorAndType/{sensor}/{start}/{end}:
+> /getHistoricalMeassuresBySensorAndType/{sensor}/{start}/{end}: [Extra Part]
 sensor -> string
 start -> string
 end-> string
@@ -101,5 +101,5 @@ Steps:
 
 Use your api created in Exercise 4 and connect it with a client.
 
-# Extra exercise
+# Extra Exercise
 Modify swagger.yaml of exercise 4 and upgrade the version to openapi: 3.0.1

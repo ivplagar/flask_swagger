@@ -100,3 +100,6 @@ Steps:
 # Exercise 5
 
 Use your api created in Exercise 4 and connect it with a client.
+
+# Extra exercise
+Modify swagger.yaml of exercise 4 and upgrade the version to openapi: 3.0.1

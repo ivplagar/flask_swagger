@@ -114,5 +114,15 @@ http://localhost:8080/v2/ui/#/Sensores
 
 Use your api created in Exercise 4 and connect it with a client.
 
+Server:
+docker build -t swagger_server .
+
+docker run -p 8080:8080 swagger_server
+
+http://localhost:8080/v2/getLastMeassureBySensor/25
+
+Client:
+Local
+
 # Extra Exercise
 Modify swagger.yaml of exercise 4 and upgrade the version to openapi: 3.0.1

@@ -108,7 +108,7 @@ Steps:
 - Check the format into https://editor.swagger.io/
 - Create a swagger_server with python-flask lenguage
 
-
+http://localhost:8080/v2/ui/#/Sensores
 
 # Exercise 5
 

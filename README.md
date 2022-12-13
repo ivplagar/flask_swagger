@@ -68,27 +68,40 @@ Info from sensor;
 
 Our api needs create the next methods;
 > /getLastMeassureBySensor/{sensor}:
+
 sensor -> string
-The methods should return;
+
+When the methods is successful then this should return;
+Measure
 - code (id del sensor) - string
 - fechamuestreo - string
 - unidad - string
 - medicion - number
 - tipo - string
 
+When the method is not successful then  this should return;
+Message
+- code - string
+- message - string
 
 > /getHistoricalMeassuresBySensorAndType/{sensor}/{start}/{end}: [Extra Part]
+
 sensor -> string
 start -> string
 end-> string
 
-The methods should return;
+When the methods is succesful the this should return;
+Measure
 - code (id del sensor) - string
 - fechamuestreo - string
 - unidad - string
 - medicion - number
 - tipo - string
 
+When the method is not successful then  this should return;
+Message
+- code - string
+- message - string
 
 Steps:
 - Create your yaml

@@ -26,13 +26,24 @@ def user(user_id):
     if request.method == 'GET':
         return 'You are running GET method for '+ user_id + ' user'
     if request.method == 'POST':
-        return 'You are running POST method for '+ user_id + ' user ' 
+        return 'You are running POST method for '+ user_id + ' user '
     if request.method == 'DELETE':
         return 'You are running DELETE method for '+ user_id + ' user '
 
+@app.get('/users/<user_id>')
+def getUser (user_id):
+        return 'You are running GET method for '+ user_id + ' user '
 
+@app.delete('/users/<user_id>')
+def deleteUser (user_id):
+        return 'You are running DELETE method for '+ user_id + ' user '
 
+@app.post('/users/<user_id>')
+def postUser (user_id):
+        return 'You are running POST method for '+ user_id + ' user '
 
+@app.put('/users/<user_id>')
+def putUser(user_id):
+        return 'You are running PUT method for '+ user_id + ' user'
 
- 
 app.run(host='localhost', port=99)

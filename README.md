@@ -129,4 +129,5 @@ Local - no docker
 http://localhost:99/getLastSensorMeasurement/1
 
 # Extra Exercise
-Modify swagger.yaml of exercise 4 and upgrade the version to openapi: 3.0.1
+- Modify swagger.yaml of exercise 4 and upgrade the version to openapi: 3.0.1
+- Add a method POST/PUT/DELETE to your exercise 4

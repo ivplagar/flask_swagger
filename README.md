@@ -55,6 +55,7 @@ Let's explore swagger together
 Then open a url on http://localhost:8080/v2/ui/#/store
 
 https://petstore.swagger.io/#/
+
 https://petstore3.swagger.io/
 
 Nota: https://editor.swagger.io/

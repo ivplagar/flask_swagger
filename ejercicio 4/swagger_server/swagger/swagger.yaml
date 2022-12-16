@@ -47,6 +47,46 @@ paths:
           schema:
             $ref: "#/definitions/Message"
       x-swagger-router-controller: "swagger_server.controllers.sensores_controller"
+  /getHistoricalMeasuresBySensorAndType/{sensor}/{start}/{end}:
+    get:
+      tags:
+      - "Sensores"
+      summary: "Obtener mediciones históricas del sensor en un rango de fechas"
+      description: "Recuperar las mediciones de un sensor en un rango de fechas especí\
+        fico"
+      operationId: "get_historical_measures_by_sensor_and_type"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "sensor"
+        in: "path"
+        description: "ID del sensor"
+        required: true
+        type: "string"
+      - name: "start"
+        in: "path"
+        description: "Fecha de inicio del rango (en formato yyyy-mm-dd)"
+        required: true
+        type: "string"
+      - name: "end"
+        in: "path"
+        description: "Fecha de fin del rango (en formato yyyy-mm-dd)"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "Mediciones encontradas"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Meassure"
+        default:
+          description: "Error en la solicitud"
+          schema:
+            $ref: "#/definitions/Message"
+      x-swagger-router-controller: "swagger_server.controllers.sensores_controller"
 definitions:
   Meassure:
     type: "object"

@@ -1,0 +1,135 @@
+---
+swagger: "2.0"
+info:
+  description: "Esta aplicación ha sido desarrollada para explotar la información\
+    \ de sensores presentes en el robot de nuestra empresa."
+  version: "1.0.0"
+  title: "Robot industry - Sensores"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    email: "ivplga@edem.es"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost"
+basePath: "/v2"
+tags:
+- name: "Sensores"
+  description: "Información relacionada con los Sensores"
+schemes:
+- "https"
+- "http"
+paths:
+  /getLastMeassureBySensor/{sensor}:
+    get:
+      tags:
+      - "Sensores"
+      summary: "Obtener la última medición del sensor"
+      description: "Recuperar la última medida de un sensor"
+      operationId: "get_last_meassure_by_sensor"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "sensor"
+        in: "path"
+        description: "ID del sensor"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "Medida encontrada"
+          schema:
+            $ref: "#/definitions/Meassure"
+        default:
+          description: "Invalid order"
+          schema:
+            $ref: "#/definitions/Message"
+      x-swagger-router-controller: "swagger_server.controllers.sensores_controller"
+  /getHistoricalMeasuresBySensorAndType/{sensor}/{start}/{end}:
+    get:
+      tags:
+      - "Sensores"
+      summary: "Obtener mediciones históricas del sensor en un rango de fechas"
+      description: "Recuperar las mediciones de un sensor en un rango de fechas especí\
+        fico"
+      operationId: "get_historical_measures_by_sensor_and_type"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "sensor"
+        in: "path"
+        description: "ID del sensor"
+        required: true
+        type: "string"
+      - name: "start"
+        in: "path"
+        description: "Fecha de inicio del rango (en formato yyyy-mm-dd)"
+        required: true
+        type: "string"
+      - name: "end"
+        in: "path"
+        description: "Fecha de fin del rango (en formato yyyy-mm-dd)"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "Mediciones encontradas"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Meassure"
+        default:
+          description: "Error en la solicitud"
+          schema:
+            $ref: "#/definitions/Message"
+      x-swagger-router-controller: "swagger_server.controllers.sensores_controller"
+definitions:
+  Meassure:
+    type: "object"
+    required:
+    - "code"
+    - "fechaMuestreo"
+    - "tipo"
+    - "unidad"
+    properties:
+      code:
+        type: "string"
+      fechaMuestreo:
+        type: "string"
+      unidad:
+        type: "string"
+      tipo:
+        type: "string"
+      medicions:
+        type: "integer"
+    example:
+      unidad: "unidad"
+      tipo: "tipo"
+      code: "code"
+      fechaMuestreo: "fechaMuestreo"
+      medicions: 0
+  Message:
+    type: "object"
+    required:
+    - "code"
+    - "fechaMuestreo"
+    - "tipo"
+    - "unidad"
+    properties:
+      code:
+        type: "string"
+      fechaMuestreo:
+        type: "string"
+      unidad:
+        type: "string"
+      tipo:
+        type: "string"
+      medicions:
+        type: "integer"
+externalDocs:
+  description: "Find out more about our store"
+  url: "http://swagger.io"

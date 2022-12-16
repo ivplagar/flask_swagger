@@ -61,7 +61,7 @@ Nota: https://editor.swagger.io/
 
 # Exercise 4 - Create your first API using swagger
 Imagine that you work into industry compony where there is a robot. 
-We have a sensor that is monitoring robot temperature via real-time and saving into a database.
+We have a sensor that is monitoring robot temperature\altura\anchura via real-time and saving into a database.
 Info from sensor;
 - id del sensor - string
 - fechamuestreo - string
